@@ -977,3 +977,24 @@ footer {
     display: block;
   }
 }
+
+.scrollTop {
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 9999;
+}
+.scrollTop .topmenu {
+  display: none;
+}
+header.scrollTop::after {
+  position: fixed;
+  top: 22px;
+}
+
+@media screen and (max-width: 767px) {
+  header.scrollTop::after {
+    top: 14px;
+  }
+}
