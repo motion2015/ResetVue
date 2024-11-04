@@ -852,3 +852,128 @@ footer {
 .autolayer.none {
   height: auto;
 }
+.bannermenu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+.itembox {
+  flex-basis: 32%;
+  padding: 30px 30px 50px 30px;
+  background: #f1f1f1;
+  border-radius: 12px;
+  position: relative;
+  cursor: pointer;
+}
+.itembox span {
+  display: block;
+  font-size: 12px;
+}
+.itembox strong {
+  color: #222;
+  font-size: 20px;
+}
+.itembox .bi {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+}
+.itembox .bi::before {
+  font-size: 50px;
+}
+
+@media screen and (max-width: 767px) {
+  .itembox {
+    flex-basis: 100%;
+    padding: 20px 20px 30px 20px;
+  }
+  .itembox + .itembox {
+    margin-top: 20px;
+  }
+  .itembox strong {
+    font-size: 16px;
+  }
+  .itembox .bi::before {
+    font-size: 45px;
+  }
+}
+
+.notice {
+  max-width: 1200px;
+  margin: 40px auto 0 auto;
+  padding: 0 20px;
+}
+.noticebox {
+  background: #d1e0e5;
+  height: 55px;
+  overflow: hidden;
+  padding: 20px 80px 10px 140px;
+  border-radius: 10px 10px 0 0;
+  position: relative;
+}
+.noticebox .maintit {
+  position: absolute;
+  left: 20px;
+  top: 11px;
+  font-size: 25px;
+  margin-bottom: 0;
+}
+
+.btn-noticemore {
+  width: 25px;
+  height: 25px;
+  background: url("/images/arrow-icon.png") no-repeat 0 0/100%;
+  position: absolute;
+  top: 17px;
+  right: 20px;
+  z-index: 9;
+  transform: rotate(-90deg);
+}
+.noticebox .newsitem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.newsitem strong {
+  font-size: 15px;
+  color: #676767;
+}
+.newsitem span {
+  font-size: 13px;
+  color: #888;
+}
+
+.noticebox.full {
+  height: auto;
+}
+.noticebox.full .btn-noticemore {
+  transform: rotate(90deg);
+}
+
+@media screen and (max-width: 767px) {
+  .noticebox {
+    padding: 10px 20px;
+    height: 45px;
+  }
+  .noticebox .maintit {
+    position: static;
+    text-align: left;
+    margin-bottom: 20px;
+  }
+  .noticebox .newsitem {
+    padding: 0;
+    display: block;
+  }
+  .newitem strong,
+  .newitem span {
+    font-size: 13px;
+  }
+  .newitem span {
+    display: block;
+  }
+}
