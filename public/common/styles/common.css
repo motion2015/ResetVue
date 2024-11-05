@@ -1031,3 +1031,16 @@ header.scrollTop::after {
     font-size: 20px;
   }
 }
+
+.subpagslider {
+  padding: 20px 20px 10px 20px;
+  background-color: #f5f5f5;
+}
+.subpagslider .slick-arrow {
+  margin-top: -35px;
+}
+.subpagslider .rollimg > strong {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
