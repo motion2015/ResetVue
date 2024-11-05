@@ -998,3 +998,36 @@ header.scrollTop::after {
     top: 14px;
   }
 }
+/* 공통 컴포넌트 꾸미기 */
+.subpage {
+  padding: 50px 0 100px;
+}
+.titlebar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 10px;
+  border-bottom: 10px;
+  background: url("/imgaes/event-end-img.png") left top/100%;
+}
+.titlebar > h1 {
+  font-size: 35px;
+  font-weight: 900;
+  color: #666;
+}
+.pagenavi {
+  color: #aeaeae;
+}
+.pagenavi > strong {
+  color: #222;
+  display: inline-block;
+  background: url("/images/icon_16_arrow_small_right.svg") no-repeat 0;
+  padding-left: 16px;
+}
+
+@media screen and (max-width: 767px) {
+  .titlebar > h1 {
+    font-size: 20px;
+  }
+}

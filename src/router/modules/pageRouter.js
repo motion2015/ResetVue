@@ -8,6 +8,11 @@ const pageRouter = {
             path: "/main",
             name: "main",
             component: () => import("@/views/main.vue"),
+        },
+        {
+            path: "/book",
+            name: "book",
+            component: () => import("@/views/Books.vue"),
         }
     ]
 }
