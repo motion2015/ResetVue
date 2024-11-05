@@ -1312,3 +1312,27 @@ header.scrollTop::after {
 .movieclasspage .btn-listdown {
   background-color: #7952b3;
 }
+
+.classsample .form-group:nth-of-type(1) {
+  padding-right: 0;
+}
+.classsample .form-group {
+  display: flex;
+}
+.classsample form {
+  max-width: 480px;
+  margin: 0 auto;
+}
+.classsample .form-group > label {
+  flex-basis: 130px;
+}
+.classsample .form-group > div {
+  flex: 1 1 0;
+}
+.classsample .form-group input.form-control {
+  height: 30px;
+}
+.classsample .form-group small {
+  font-size: 14px;
+  margin-top: 5px;
+}
