@@ -7,6 +7,35 @@
           <strong v-html="item.name"></strong>
         </div>
       </VueSlickCarousel>
+      <section class="bookdetail">
+        <h1 class="booktitle">
+          Do it! 웹 사이트 따라 만들기
+          <span>HTML, CSS, 자바스크립트, jquery, Ajax로 웹 퍼블리싱</span>
+        </h1>
+        <div class="book-info">
+          <div class="imgview">
+            <div class="imgbook">
+              <img src="/images/books_image/book01.jpg" alt="" />
+            </div>
+            <div class="bookbtns">
+              <b-button variant="lightgray">
+                <i class="bi bi-search" alt="" />책 미리보기
+              </b-button>
+              <b-button variant="lightgray">
+                <i class="bi bi-hdd" alt="" />전자책
+              </b-button>
+            </div>
+          </div>
+          <div class="infolist">
+            <ul>
+              <li v-for="(item, index) in bookinfolists" :key="index">
+                <span class="label">{{ item.label }}</span>
+                <span class="infocontent">{{ item.content }}</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
     </div>
   </Subpage>
 </template>
@@ -92,6 +121,14 @@ export default {
           },
         ],
       },
+      bookinfolists: [
+        { label: "저자", content: "김윤미" },
+        { label: "발행일", content: "2019-11-28" },
+        { label: "사양", content: "312쪽 | 188*257mm" },
+        { label: "ISBN", content: "979-11-6383-119-2 13000" },
+        { label: "정가", content: "16,000원" },
+        { label: "상태", content: "정상 판매중" },
+      ],
     };
   },
 };
