@@ -1,7 +1,12 @@
 <template>
   <Subpage :pagetit="'도서 소개'">
     <div class="bookpage">
-      <VueSlickCarousel class="subpagslider" v-bind="settings">
+      <VueSlickCarousel
+        class="subpagslider"
+        v-bind="settings"
+        @init="handleInit"
+        ref="carousel"
+      >
         <div
           class="rollimg"
           :class="{ active: index === tabIndex }"
@@ -143,6 +148,11 @@ export default {
         this.tabIndex = tabIndex;
         return this.$router.push("/book?tabId=" + tabIndex);
       }
+    },
+    handleInit() {
+      this.$nextTick(() => {
+        this.$refs.carousel.goTo(this.tabIndex);
+      });
     },
   },
 };
