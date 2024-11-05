@@ -1,3 +1,13 @@
+const withPrefix = (prefix, routes) =>
+
+    routes.map((route) => {
+        console.log(prefix);
+        console.log(routes);
+        console.log(route);
+        route.path = prefix + route.path;
+        return route;
+    });
+
 const pageRouter = {
     path: "/",
     name: "layout",
@@ -9,11 +19,17 @@ const pageRouter = {
             name: "main",
             component: () => import("@/views/main.vue"),
         },
-        {
-            path: "/book",
-            name: "book",
-            component: () => import("@/views/Books.vue"),
-        }
+        ...withPrefix("/book", [
+            {
+                path: "/",
+                component: () => import("@/views/Books.vue"),
+            },
+            {
+                path: "/:tabId",
+                name: "book",
+                component: () => import("@/views/Books.vue"),
+            },
+        ])
     ]
 }
 

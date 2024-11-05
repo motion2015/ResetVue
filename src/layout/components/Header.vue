@@ -143,6 +143,7 @@ export default {
     return {
       menulists: [
         { menutext: "도서 소개", link: "/book" },
+        //{ menutext: "도서 소개", link: "/book?tabId=0" }, // 중복된 네비게이션: 사용자가 이미 /book?tabId=0 경로에 있을 때 또 다시 같은 경로로 이동하려고 할 때 발생합니다. 이때 애플리케이션이 경로를 재설정하려고 하면 중복된 이동이므로 경고가 발생
         { menutext: "자료실", link: "/reference" },
         { menutext: "동영상 강의", link: "/movieclass" },
         { menutext: "교재 샘플", link: "/classsample" },
