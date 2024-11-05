@@ -45,6 +45,11 @@ const pageRouter = {
             name: "classsample",
             component: () => import("@/views/classsample.vue"),
         },
+        {
+            path: "/company",
+            name: "company",
+            component: () => import("@/views/company.vue"),
+        },
 
     ]
 }
