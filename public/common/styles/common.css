@@ -1148,3 +1148,69 @@ header.scrollTop::after {
     top: 3px;
   }
 }
+
+/* 도서 상세 탭메뉴 만들기 */
+.detailTap {
+  display: flex;
+}
+.detailTap .btn-group-toggle {
+  flex: 1 1 auto;
+  border-left: 1px solid #ddd;
+  background-color: #eaeaea;
+}
+.btn-detailtap {
+  color: #aeaeae;
+  font-size: 14px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 0;
+}
+.btn-detailtap .bi::before {
+  margin: -2px 2px 0 0;
+}
+.detailTap .btn-group-toggle:nth-of-type(1) {
+  border-left: none;
+}
+.btn-detailtap.active {
+  background-color: #606060;
+  color: #fff;
+}
+@media screen and (max-width: 767px) {
+  .detailTap {
+    flex-wrap: wrap;
+  }
+  .detailTap .btn-group-toggle {
+    flex-basis: 33.3%;
+    flex-shrink: 0;
+  }
+  .detailTap .btn-group-toggle:nth-of-type(4) {
+    border-left: none;
+  }
+}
+/* 탭 콘텐츠꾸미기 */
+.detailTapCon {
+  padding: 30px;
+}
+.tapcontit {
+  margin-bottom: 20px;
+  font-size: 18px;
+  color: #7952b3;
+  font-weight: 900;
+}
+.tapcontit strong {
+  color: #7952b3;
+  font-size: 24px;
+  font-weight: 900;
+}
+.tapcontit p {
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 767px) {
+  .detailTapCon {
+    padding: 20px 0;
+  }
+  .tapcontit,
+  .tapcontit > strong {
+    font-size: 15px;
+  }
+}
